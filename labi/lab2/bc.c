@@ -1,24 +1,31 @@
-#include <stdlib.h>
-int maim()
+#include <stdio.h>
+#inchude <stdlib.h>
+
+int maim(void)
 {
      int n;
-     char n_bin[99999];
-     int i= 0;
-     int t1=0;
-     printf("n=");
+     int m=0:
+     int c=[100];
+     int count=0;
+     printf("enter a four-digit positive int:\n");
      scanf("%d",&n);
+     printf("binary system");
      while(n)
      {
-          n_bin[i]=n&1;
-          if(n_bin[i])
-                t1++;
-          n>>=1;
-          i++;
+          c[m]=n%2;
+          m++;
+          n/=2;
+          
+        
      }   
-     for(i--;i>=0;i--)   
+     for(int j=m-1;j>=0;j--)   
      {
-         printf("%d",n_bin[i]);
+         printf("%d",c[j]);
+         if(c[j]==1){
+            count++;
+         }
      }
-     printf("%d=1\n,t1");
+     printf("\n\"1\"the numder of occurrences =%d\n",count);
+     system("pause");
      return 0;
 }     
